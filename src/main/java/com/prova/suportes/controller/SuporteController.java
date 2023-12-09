@@ -16,11 +16,8 @@ public class SuporteController {
 
     @PostMapping
     public ResponseEntity<Void> validaExpressao(@RequestBody String expressao){
-        try {
-            service.validaExpressao(expressao);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        service.validaExpressao(expressao);
+
         return ResponseEntity.ok().build();
     }
 }
